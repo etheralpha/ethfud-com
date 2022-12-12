@@ -51,7 +51,6 @@ layout: default
                     {%- assign validity_status = "fud" -%}
                     {%- assign validity_color = 'danger' -%}
                   {%- endif -%}
-                  <!--  -->
                   {%- assign words = claim.title | split: " " -%}
                   {%- assign title = "" -%}
                   {%- assign excluded_words = "at,off,by,on,for,in,to,of,and,the,as,but,if,nor" | split: "," -%}
@@ -64,7 +63,6 @@ layout: default
                     {%- endif -%}
                   {%- endfor -%}
                   {%- assign title = title | strip -%}
-                  <!--  -->
                   <p class="claim {{validity_status}} d-flex align-items-start">
                     <span class="validity me-2 text-uppercase fst-italic fw-semibold text-{{validity_color}}">{{validity_status}}</span>
                     <a href="{{claim.url}}" target="_blank" class="flex-fill me-2 text-decoration-none">{{claim.title}}</a>
