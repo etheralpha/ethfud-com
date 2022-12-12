@@ -1,0 +1,207 @@
+:root {
+  --blue: rgb(27, 34, 54, 1);
+  --blue-dark: rgba(19, 24, 39, 1);
+  --gray: rgb(181, 189, 219, 1);
+  --gray-dark: rgb(137, 145, 173, 1);
+  --slate: #374467;
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-blue-dark {
+  background-color: var(--blue-dark);
+}
+.bg-slate {
+  background-color: var(--slate);
+}
+.text-gray {
+  color: var(--gray);
+}
+.text-gray-dark {
+  color: var(--gray-dark);
+}
+.border-slate {
+  border-color: var(--slate) !important;
+}
+
+
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.navbar-expand-lg .navbar-collapse {
+  display: flex!important;
+  flex-basis: auto !important;
+}
+.navbar-expand-lg .navbar-nav {
+  flex-direction: row;
+}
+.nav-link {
+  color: var(--gray);
+  padding-bottom: 0px;
+}
+
+
+
+a {
+  color: var(--gray) !important;
+}
+a:hover,
+a:visited {
+  color: var(--gray-dark) !important;
+}
+
+
+
+.btn,
+.btn-check,
+.btn-check+.btn:hover,
+.btn:hover {
+  color: #fff;
+  border-radius: 0.5rem;
+  border-color: var(--slate);
+}
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+  background-color: var(--slate);
+  border-color: var(--slate);
+  color: #fff;
+}
+
+
+.form-control,
+.form-control:focus {
+  background-color: var(--blue-dark);
+  border-color: var(--slate);
+  color: var(--gray);
+}
+
+
+
+
+
+.markdown,
+.markdown p,
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  color: var(--gray);
+}
+.markdown .category:first-child {
+  margin-top: 0 !important;
+}
+.markdown details {
+  border: solid 1px var(--slate);
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--slate);
+}
+.markdown details[open] summary {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--gray);
+}
+.markdown img {
+  margin: 5px auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  display: block;
+}
+.markdown .caption {
+  display: block;
+  text-align: center;
+  font-size: .875em;
+  padding-bottom: 1rem!important;
+}
+.markdown table {
+  width: 100% !important;
+  margin-bottom: 1rem !important;
+  color: var(--gray) !important;
+  vertical-align: top !important;
+  border-color: var(--slate) !important;
+  border-collapse: collapse !important;
+}
+.markdown table>thead {
+  vertical-align: bottom;
+}
+.markdown table>:not(:last-child)>:last-child>* {
+  border-bottom-color: currentColor;
+}
+.markdown table>:not(caption)>*>* {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.markdown table>tbody {
+  vertical-align: inherit;
+}
+.markdown pre {
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+}
+.markdown pre code {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+.validity {
+  opacity: 0.9;
+  width: 50px;
+  min-width: 50px;
+}
+.claim a:hover {
+  text-decoration: underline !important;
+}
+.copy {
+  border-radius: 0.5rem;
+  border: solid rgba(0,0,0,0) 1px;
+  padding: 1px 6px 4px 6px;
+  color:  var(--gray);
+}
+.copy:hover {
+  border: solid rgba(0,0,0,0) 1px;
+  color: var(--gray-dark);
+}
+#pageLink {
+  color: var(--gray);
+}
+#pageLink:hover {
+  color: var(--gray-dark) !important;
+}
+#pageLink svg {
+  width: 2.25rem;
+  height: auto;
+}
+.toast {
+  background-color: rgba(0,0,0,0.9);
+  border-radius: 0.5rem !important;
+  color: var(--gray);
+}
+.toast-header {
+  background-color: rgba(0,0,0,1);
+  color: var(--gray);
+}
+
+
+
+
+
+
+

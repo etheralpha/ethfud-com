@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-light">
+  {%- include partials/head.html -%}
+  <body class="d-flex flex-column min-vh-100 bg-light">
+    {%- if site.enableNotification == true -%}
+      {%- include partials/notification.html -%}
+    {%- endif -%}
+    {%- if site.enableToast == true -%}
+      {%- include partials/toast.html -%}
+    {%- endif -%}
+    {%- if site.nav_enabled == true -%}
+      {%- include partials/nav.html -%}
+    {%- endif -%}
+    <div id="darkModeToggle">
+      <span id="enableDarkMode" onclick="setDarkMode('true')">{{site.data.icons.sun}}</span>
+      <span id="disableDarkMode" class="d-none" onclick="setDarkMode('false')">{{site.data.icons.sun}}</span>
+    </div>
+
+
+    <!-- Header -->
+    <header class="container py-4 mt-5 bg-dark">
+      <div class="text-center">
+
+        {%- if page.header -%}
+          <h1 class="display-6 fw-bold mb-3">{{page.header}}</h1>
+        {%- elsif page.title -%}
+          <h1 class="display-6 fw-bold mb-3">{{page.title}}</h1>
+        {%- endif -%}
+        {%- if page.subheader -%}
+          <p class="col-md-10 col-lg-8 mx-auto lead">
+            {{page.subheader}}
+          </p>
+        {%- endif -%}
+        {%- if page.note -%}
+          <small><em>{{page.note}}</em></small>
+        {%- endif -%}
+
+          {%- comment -%}
+            Usage:
+            buttons:
+            - link: /path/
+              text: Link 1 Title
+            - link: "https://example.com"
+              text: Link 2 Title
+          {%- endcomment -%}
+          {%- if page.buttons -%}
+            {%- for button in page.buttons -%}
+              {%- if button.link contains "http" -%}
+                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
+              {%- else -%}
+                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+      </div>
+    </header>
+
+
+    <!-- Content -->
+    <section class="container py-4">
+      <div class="row justify-content-center">
+        <div markdown="1" class="col col-md-8 col-lg-8">
+          {{content}}
+        </div>
+      </div>
+    </section>
+
+  	{%- include partials/footer.html -%}
+    <!-- Bootstrap 5 JS -->
+    {{site.bootstrap_js}}
+    <!-- Custom JS -->
+  	<script src="/assets/js/main.js" type="application/javascript"></script>
+    {%- case page.name -%}
+      {%- when "custom.md" -%}
+         <script src="/assets/js/custom.js" type="application/javascript"></script>
+      {%- else -%}
+    {%- endcase -%}
+  </body>
+</html>

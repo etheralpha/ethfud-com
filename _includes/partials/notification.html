@@ -1,0 +1,12 @@
+<!-- Notification Bar -->
+<div id="notification" class="p-2 pe-4">
+  <!-- 
+    When creating new notification you must increase 
+    the config.yml "notificationMsgId" value so it 
+    will show again for users that previously closed it 
+  -->
+  <span class="pe-2">
+    {{site.notificationMsg}}
+  </span>
+  <span id="notificationClose" class="my-auto" onclick="hideNotification()">✕</span>
+</div>

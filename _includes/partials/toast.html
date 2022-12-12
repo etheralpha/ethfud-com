@@ -1,0 +1,18 @@
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-header">
+      <button type="button" class="btn bg-info btn-sm" style="max-height: 17px; max-width: 15px; border: none;" disabled>&nbsp;</button>
+      <strong class="me-auto ms-2">{{site.toastTitle}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="hidetoast()"></button>
+    </div>
+    <div class="toast-body">
+      {{site.toastMsg}}
+      {%- if site.toastLink -%}
+        <div class="mt-2 pt-2 border-top border-slate">
+          <a href="{{site.toastLink}}" target="_blank" class="btn btn-sm">Read more</a>
+          <button type="button" class="btn btn-sm" data-bs-dismiss="toast" onclick="hidetoast()">Close</button>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
