@@ -58,11 +58,14 @@ a:visited {
 
 
 .btn,
-.btn-check,
+.btn-check {
+  color: #fff;
+  border-radius: 0.5rem;
+  border-color: var(--slate);
+}
 .btn-check+.btn:hover,
 .btn:hover {
   color: #fff;
-  border-radius: 0.5rem;
   border-color: var(--slate);
 }
 .btn-check:checked+.btn,
