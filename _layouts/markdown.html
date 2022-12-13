@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-light">
+<html lang="en" class="bg-blue-dark">
   {%- include partials/head.html -%}
-  <body class="d-flex flex-column min-vh-100 bg-light">
+  <body class="d-flex flex-column min-vh-100 bg-blue-dark">
     {%- if site.enableNotification == true -%}
       {%- include partials/notification.html -%}
     {%- endif -%}
@@ -11,60 +11,51 @@
     {%- if site.nav_enabled == true -%}
       {%- include partials/nav.html -%}
     {%- endif -%}
-    <div id="darkModeToggle">
+    <!-- <div id="darkModeToggle">
       <span id="enableDarkMode" onclick="setDarkMode('true')">{{site.data.icons.sun}}</span>
       <span id="disableDarkMode" class="d-none" onclick="setDarkMode('false')">{{site.data.icons.sun}}</span>
-    </div>
+    </div> -->
 
 
     <!-- Header -->
-    <header class="container py-4 mt-5 bg-dark">
-      <div class="text-center">
-
+    <header class="bg-blue-dark">
+      <div class="container pt-3 pb-5 mt-2 mb-5 text-center text-white">
         {%- if page.header -%}
-          <h1 class="display-6 fw-bold mb-3">{{page.header}}</h1>
+          <h1 class="display-5 fw-bold text-capitalize mt-5">{{page.header}}</h1>
         {%- elsif page.title -%}
-          <h1 class="display-6 fw-bold mb-3">{{page.title}}</h1>
+        <h1 class="display-5 fw-bold text-capitalize mt-5">{{page.title}}</h1>
         {%- endif -%}
         {%- if page.subheader -%}
-          <p class="col-md-10 col-lg-8 mx-auto lead">
-            {{page.subheader}}
-          </p>
+          <div class="col-lg-7 mx-auto">
+            <p class="lead mb-4">{{page.subheader}}</p>
+          </div>
         {%- endif -%}
         {%- if page.note -%}
-          <small><em>{{page.note}}</em></small>
+          <div class="mb-2">
+            <small><em>{{page.note}}</em></small>
+          </div>
         {%- endif -%}
-
-          {%- comment -%}
-            Usage:
-            buttons:
-            - link: /path/
-              text: Link 1 Title
-            - link: "https://example.com"
-              text: Link 2 Title
-          {%- endcomment -%}
-          {%- if page.buttons -%}
-            {%- for button in page.buttons -%}
-              {%- if button.link contains "http" -%}
-                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
-              {%- else -%}
-                <a href="{{button.link}}" class="btn btn-outline-thirdary btn-lg px-4 m-1">{{button.text}}</a>
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
-
       </div>
     </header>
 
 
     <!-- Content -->
-    <section class="container py-4">
-      <div class="row justify-content-center">
-        <div markdown="1" class="col col-md-8 col-lg-8">
-          {{content}}
+    {%- if page.content != "" -%}
+      <section class="markdown">
+        <div class="container py-5">
+          <div class="row justify-content-center" style="margin-top: -8rem;">
+            <div class="col-12">
+              <div class="card rounded-3 mx-auto bg-blue" style="max-width: 40rem;">
+                <div class="card-body m-3">
+                  {{content | markdownify}}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    {%- endif -%}
+
 
   	{%- include partials/footer.html -%}
     <!-- Bootstrap 5 JS -->

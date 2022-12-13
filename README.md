@@ -29,7 +29,7 @@ Resources:
   ---
   layout: claim
   title: 
-  permalink: 
+  permalink: claims/
   validity: 
   ---
   ```
@@ -37,7 +37,7 @@ Resources:
   ```
   ---
   layout: claim
-  title: Ethereum was premined
+  title: Ethereum was premined by Vitalik and the Ethereum Foundation
   permalink: claims/ethereum-premine
   validity: fud
   ---
