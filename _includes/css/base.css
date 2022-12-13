@@ -40,9 +40,13 @@
 .navbar-expand-lg .navbar-nav {
   flex-direction: row;
 }
-.nav-link {
-  color: var(--gray);
+.nav-link,
+.nav-link:visited {
+  color: var(--gray) !important;
   padding-bottom: 0px;
+}
+.nav-link:hover {
+  color: var(--gray-dark) !important;
 }
 
 
