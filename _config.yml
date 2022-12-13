@@ -17,14 +17,6 @@ analytics_tag:
 # Navigation
 nav_enabled: true
 
-# Links
-github_repo: https://github.com/etheralpha/
-
-# Categories - Used to build the directory sections; only posts with these categories will be listed.
-directory_categories:
-  - transactions
-  - disk
-
 # Notification
 enableNotification: false
 notificationMsgId: 1 # must increment when creating a new message

@@ -2,6 +2,7 @@
 <html lang="en" class="bg-blue-dark">
   {%- include partials/head.html -%}
   <body class="d-flex flex-column min-vh-100 bg-blue-dark">
+
     {%- if site.enableNotification == true -%}
       {%- include partials/notification.html -%}
     {%- endif -%}
@@ -11,10 +12,7 @@
     {%- if site.nav_enabled == true -%}
       {%- include partials/nav.html -%}
     {%- endif -%}
-    <!-- <div id="darkModeToggle">
-      <span id="enableDarkMode" onclick="setDarkMode('true')">{{site.data.icons.sun}}</span>
-      <span id="disableDarkMode" class="d-none" onclick="setDarkMode('false')">{{site.data.icons.sun}}</span>
-    </div> -->
+
 
     <!-- Header -->
     <header class="bg-blue-dark">
@@ -25,8 +23,8 @@
             data-bs-toggle="tooltip" data-bs-placement="top" title="Copied!" data-bs-trigger="click">
             {{site.data.icons.link}}
           </a>
-          <!-- <span id="claim{{forloop.index}}" class="copy" onclick="copyText('{{site.url}}{{claim.url}}', this.id)" data-bs-toggle="tooltip" data-bs-placement="top" title="Copied!" data-bs-trigger="click">{{site.data.icons.link}}</span> -->
         </h1>
+
         {%- assign validity_status = "falsy" -%}
         {%- assign validity_color = 'warning' -%}
         {%- if page.validity == true -%}
@@ -36,6 +34,7 @@
           {%- assign validity_status = "fud" -%}
           {%- assign validity_color = 'danger' -%}
         {%- endif -%}
+
         <div class="col-lg-7 mx-auto">
           <p class="lead mb-4">
             <span class="validity me-2 text-uppercase fst-italic fw-semibold text-{{validity_color}} border-bottom border-2 border-{{validity_color}} pb-1">{{validity_status}}</span>
@@ -43,6 +42,7 @@
         </div>
       </div>
     </header>
+
 
     <!-- Content -->
     <section class="markdown">
@@ -59,6 +59,7 @@
       </div>
     </section>
 
+
     {%- include partials/footer.html -%}
     <!-- Bootstrap 5 JS -->
     {{site.bootstrap_js}}
@@ -71,4 +72,3 @@
     {%- endcase -%}
   </body>
 </html>
-

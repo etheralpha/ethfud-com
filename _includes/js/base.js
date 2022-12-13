@@ -1,9 +1,10 @@
-// Enable tooltips
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
+// enable tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
+// copy link and show tooltip confirmation
 function copyText(text, id) {
   navigator.clipboard.writeText(text).then(function() {
     let tooltipElement = document.getElementById(id);
@@ -15,13 +16,14 @@ function copyText(text, id) {
   });
 }
 
-// filter claims to ones that match search term
+// aplly filter after search typing delay
 function search() {
   delay(function(){
     applyFilter();
   }, 200 );
 }
 
+// filter claims to ones that match search term
 function applyFilter() {
   let searchInput = document.getElementById('searchInput');
   let searchText = searchInput.value.toLowerCase();
@@ -49,6 +51,7 @@ function applyFilter() {
   }
 }
 
+// general delay function
 var delay = (function(){
   var timer = 0;
   return function(callback, ms){
@@ -56,15 +59,3 @@ var delay = (function(){
     timer = setTimeout(callback, ms);
   };
 })();
-
-
-
-
-
-
-
-
-
-
-
-
