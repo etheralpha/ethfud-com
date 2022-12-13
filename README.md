@@ -24,6 +24,8 @@ Resources:
 ## Creating A New Page
 
 1. In the `/claims` folder, create a new markdown file using the claim as the filename. For example, a page about a claim that Ethereum was premined would have a page titled `ethereum-premine.md`.
+  - A template can be found at `claims/_template.md`.
+  - An example file can be found at `claims/_example.md`.
 2. At the top of the page add the following "frontmatter". This is page metadata used when building the site.
   ```
   ---
