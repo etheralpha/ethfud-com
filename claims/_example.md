@@ -1,12 +1,12 @@
 ---
-layout: claim
-title: This Is an Example
-permalink: claims/this-is-an-example
-validity: true # options = true, false, falsy
+layout: claim # Keep this as `claim`, this is the template used when building the page.
+title: Ethereum was premined by Vitalik and the Ethereum Foundation # This is the title of the page and the page header.
+permalink: claims/ethereum-premined # The URL path for the page you're creating. Keep the `claims/` prefix.
+validity: false # options = true, false, falsy
 ---
 
 
-This is an example to show markdown markup and frontmatter structure used for claim pages.
+This is an example to show markdown markup and frontmatter structure used for pages.
 
 
 
@@ -50,9 +50,9 @@ code block
 
 header 1      | header 2
 --------------|--------------
-row 1, cell 1 | row 1, cell 2
-row 2, cell 1 | row 2, cell 2
-row 3, cell 1 | row 3, cell 2
+row 1, col 1 | row 1, col 2
+row 2, col 1 | row 2, col 2
+row 3, col 1 | row 3, col 2
 
 <details markdown="1">
   <summary>Expandable content (click to open)</summary>
@@ -71,4 +71,7 @@ row 3, cell 1 | row 3, cell 2
 this is a caption
 
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate ut pharetra sit amet. At tempor commodo ullamcorper a. Convallis aenean et tortor at risus viverra. Aliquet sagittis id consectetur purus ut. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Ac orci phasellus egestas tellus rutrum tellus. Dolor morbi non arcu risus quis. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Suspendisse potenti nullam ac tortor vitae purus faucibus. 
+
+Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Nulla aliquet enim tortor at auctor urna nunc id. Consectetur a erat nam at lectus urna. Pretium fusce id velit ut tortor pretium. Diam in arcu cursus euismod quis viverra nibh. Donec adipiscing tristique risus nec feugiat in. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Ac tortor dignissim convallis aenean et tortor at risus viverra. Ut porttitor leo a diam sollicitudin tempor id eu. Varius duis at consectetur lorem.
 
