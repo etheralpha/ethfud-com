@@ -1,6 +1,6 @@
 # ethfud-com
 
-This is the repo for <https://ethfud.com>, an educational site used to combat misinformation.
+This is the source code for <https://ethfud.com>, an educational site to help combat misinformation.
 
 
 
@@ -90,9 +90,9 @@ code block
 
 header 1      | header 2
 --------------|--------------
-row 1, cell 1 | row 1, cell 2
-row 2, cell 1 | row 2, cell 2
-row 3, cell 1 | row 3, cell 2
+row 1, col 1 | row 1, col 2
+row 2, col 1 | row 2, col 2
+row 3, col 1 | row 3, col 2
 
 <details markdown="1">
   <summary>Expandable content (click to open)</summary>
