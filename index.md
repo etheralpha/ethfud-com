@@ -70,7 +70,7 @@ layout: default
                   </p>
                 {%- endif -%}
               {%- endfor -%}
-              <p id="noResults" class="d-none text-gray">No results founds, try simplifying your search</p>
+              <p id="noResults" class="d-none text-gray">No results found, try simplifying your search</p>
             </div>
           </div>
         </div>
