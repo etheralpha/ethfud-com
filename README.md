@@ -54,35 +54,104 @@ Resources:
 
 ## Markdown Examples
 
+
 # H1
+
+```
+# H1
+```
+
 
 ## H2
 
+```
+## H2
+```
+
+
 ### H3
+
+```
+### H3
+```
+
 
 #### H4
 
+```
+#### H4
+```
+
+
 ##### H5
+
+```
+##### H5
+```
+
 
 ###### H6
 
+```
+###### H6
+```
+
+
 [link](/t/test/)
+
+```
+[link](/t/test/)
+[link](https://example.com)
+```
+
 
 **bold text**
 
+```
+**bold text**
+```
+
+
 *italic text*
+
+```
+*italic text*
+```
+
 
 __*bold and italic text*__
 
+```
+__*bold and italic text*__
+```
+
+
 `inline code`
+
+```
+`inline code`
+```
+
 
 ```
 code block
 ```
 
+    ```
+    code block
+    ```
+
+
 - this is an
 - unordered
     - list
+
+```
+- this is an
+- unordered
+    - list
+```
+
 
 1. this is an:
     ```
@@ -90,11 +159,29 @@ code block
     ```
 1. continued after code block
 
+```
+1. this is an:
+    ```
+    ordered list
+    ```
+1. continued after code block
+```
+
+
 header 1      | header 2
 --------------|--------------
-row 1, col 1 | row 1, col 2
-row 2, col 1 | row 2, col 2
-row 3, col 1 | row 3, col 2
+row 1, col 1  | row 1, col 2
+row 2, col 1  | row 2, col 2
+row 3, col 1  | row 3, col 2
+
+```
+header 1      | header 2
+--------------|--------------
+row 1, col 1  | row 1, col 2
+row 2, col 1  | row 2, col 2
+row 3, col 1  | row 3, col 2
+```
+
 
 <details markdown="1">
   <summary>Expandable content (click to open)</summary>
@@ -105,8 +192,29 @@ row 3, col 1 | row 3, col 2
       - you
 </details>
 
+```
+<details markdown="1">
+  <summary>Expandable content (click to open)</summary>
+  Peek a boo!
+
+  - I
+    - see
+      - you
+</details>
+```
+
+
 ![](/assets/img/logo.png)
+
+```
+![](/assets/img/logo.png)
+```
+
 
 {:class="caption"}
 this is a caption
 
+```
+{:class="caption"}
+this is a caption
+```
